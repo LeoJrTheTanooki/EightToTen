@@ -4,7 +4,7 @@ public class GuessItService : IGuessItService
 {
     public string GuessIt(string difficulty, string userGuess)
     {
-        if (difficulty.Length > 0)
+        if (difficulty.ToLower() == "easy" || difficulty.ToLower() == "medium" || difficulty.ToLower() == "hard")
         {
             int validatedNum = 0;
             bool success = int.TryParse(userGuess, out validatedNum);
@@ -63,7 +63,7 @@ public class GuessItService : IGuessItService
                     }
                 }
             }
-            return "No valid number given";
+            return "No valid number given.";
         }
         return "No difficulty was selected.";
     }

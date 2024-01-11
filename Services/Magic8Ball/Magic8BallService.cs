@@ -2,10 +2,8 @@ namespace EightToTen.Services.Magic8Ball;
 
 public class Magic8BallService : IMagic8BallService
 {
-    public string Magic8Ball(string userQuestion, string userName = "stranger")
+    public string Magic8Ball(string userQuestion = "Will I be blessed with good luck today?", string userName = "stranger")
     {
-        if (userQuestion.Length > 0)
-        {
             Random random = new();
             int randomNumber = random.Next(0, 8);
             string eightBall = "";
@@ -38,7 +36,7 @@ public class Magic8BallService : IMagic8BallService
                     break;
             }
             return $"Hello, {userName}... it seems you are asking '{userQuestion}'...\nThe Magic 8 Ball says '{eightBall}...";
-        }
-        return "You have not asked a question... I'm afraid I cannot tell you what the Magic 8 Ball says...";
+        
+
     }
 }

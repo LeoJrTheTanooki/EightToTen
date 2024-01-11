@@ -15,7 +15,7 @@ namespace EightToTen.Controllers
         }
         [HttpGet]
         [Route("/Magic8Ball")]
-        public string Magic8Ball(string userQuestion, string userName = "stranger")
+        public string Magic8Ball(string userQuestion = "Will I be blessed with good luck today?", string userName = "stranger")
         {
             return _magic8Ball.Magic8Ball(userQuestion, userName);
         }
