@@ -21,11 +21,11 @@ public class GuessItService : IGuessItService
                     }
                     else if (validatedNum > thinkingNumber)
                     {
-                        return $"{part1}It seems you aimed too high...";
+                        return $"{part1}\nIt seems you aimed too high...";
                     }
                     else if (validatedNum < thinkingNumber)
                     {
-                        return $"{part1}You aimed too low here...";
+                        return $"{part1}\nYou aimed too low here...";
                     }
                 }
                 if (difficulty.ToLower() == "medium")
@@ -38,11 +38,11 @@ public class GuessItService : IGuessItService
                     }
                     else if (validatedNum > thinkingNumber)
                     {
-                        return $"{part1}It seems you aimed too high...";
+                        return $"{part1}\nIt seems you aimed too high...";
                     }
                     else if (validatedNum < thinkingNumber)
                     {
-                        return $"{part1}You aimed too low here...";
+                        return $"{part1}\nYou aimed too low here...";
                     }
                 }
                 if (difficulty.ToLower() == "hard")
@@ -55,11 +55,11 @@ public class GuessItService : IGuessItService
                     }
                     else if (validatedNum > thinkingNumber)
                     {
-                        return $"{part1}It seems you aimed too high...";
+                        return $"{part1}\nIt seems you aimed too high...";
                     }
                     else if (validatedNum < thinkingNumber)
                     {
-                        return $"{part1}You aimed too low here...";
+                        return $"{part1}\nYou aimed too low here...";
                     }
                 }
             }
